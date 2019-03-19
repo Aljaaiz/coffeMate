@@ -1,0 +1,36 @@
+.about__img-item{
+    width:100%;
+    display: block;
+    border-radius: .25rem;
+    box-shadow:0px -1px  20px $dark-yellow;
+}
+.grid-container{
+    max-width: 90vw;
+    margin: 2rem auto;
+    display: grid;
+    grid-row-gap: 2rem;
+    
+ }
+.about-container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr;
+    grid-gap:2rem;
+}
+ @media screen and(min-width:768px){
+     .grid-container-medium-2{
+         display: grid;
+         grid-template-columns:1fr 1fr;
+         grid-column-gap:4rem;
+     }
+     .grid-container{
+        max-width: 75vw;
+     } 
+     .order-top{
+         order:-1;
+     }
+     .about-container{
+        display: grid;
+        grid-template-columns: 100%;
+ }
+}

@@ -1,7 +1,7 @@
-$bright-yellow:#CAA77A;
-$dark-yellow:#C49C6A;
-$black:#1A1713;
-$brown:rgb(70, 42, 1);
+@import './Variables';
+@import  './About';
+
+
 *{
     box-sizing:border-box;
     margin: 0;
@@ -9,13 +9,39 @@ $brown:rgb(70, 42, 1);
 }
 body{
     font-family: 'Montserrat', sans-serif;
-    background:radial-gradient(rgba(0, 0, 0, 0.509),rgba(0, 0, 0, 0.612)),url(../img/bodyBcg.jpeg);
+    background:radial-gradient(rgba(114, 114, 114, 0.509),rgba(80, 80, 80, 0.612)),url(../img/bodyBcg.jpeg);
     background-repeat: no-repeat;
+    background-size:cover;
 }
 // GLOBAL FONTS
 .great-font{
     font-family: 'Great Vibes', handwriting;
 }
+.section-padding{
+    padding:3rem 0;
+}
+//Section
+.section-title{
+    font-size:3rem;
+
+    &__name{
+        font-size:3rem;
+        text-transform: capitalize;
+    }
+    &__underline{
+        background:$dark-yellow;
+        height:2px;
+        width:160px;
+    }
+    &__text{
+        margin-top: 1rem;
+        line-height:1.5rem;
+        color:$black;
+    }
+}
+
+
+
 // PREALODER
 .preloader{
     position: fixed;
