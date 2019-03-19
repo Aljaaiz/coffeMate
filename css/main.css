@@ -29,6 +29,18 @@
     display: grid;
     grid-template-columns: 100%; } }
 
+#drink {
+  background: #573b14; }
+
+.drink-card, .drink-form {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 70%;
+  justify-content: center;
+  grid-row-gap: 1.5rem;
+  margin: 0 auto;
+  background: #000; }
+
 * {
   box-sizing: border-box;
   margin: 0;
