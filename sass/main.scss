@@ -1,0 +1,236 @@
+$bright-yellow:#CAA77A;
+$dark-yellow:#C49C6A;
+$black:#1A1713;
+$brown:rgb(70, 42, 1);
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background:radial-gradient(rgba(0, 0, 0, 0.509),rgba(0, 0, 0, 0.612)),url(../img/bodyBcg.jpeg);
+    background-repeat: no-repeat;
+}
+// GLOBAL FONTS
+.great-font{
+    font-family: 'Great Vibes', handwriting;
+}
+// PREALODER
+.preloader{
+    position: fixed;
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    background:$bright-yellow;
+    z-index:100;
+}
+.preloade_item{
+    // height:100%;
+}
+// END OF GLOBAL FONTS
+header{
+    position: relative;
+    min-height:100vh;
+    display: grid;
+    grid-template-columns: 80%;
+    justify-content: center;
+    align-items: center;
+    
+  .navBtn{
+      position: fixed;
+      top:20px;
+      right:20px;
+      font-size:3.5rem;
+      color:$dark-yellow;
+      cursor: pointer;
+  }
+
+
+  .nav{
+    
+      position: fixed;
+      height:100%;
+      width:12rem;
+      background:rgba(237, 171, 85, 0.708);
+      top:0;
+      left:0;
+      z-index: 3;
+    //   display: none;
+   
+      &__links{
+          list-style: none;
+       
+
+    .nav__single-link{
+     display: block;
+    text-decoration: none;
+    color:rgb(70, 42, 1);
+    font-size:1.5rem;
+    padding: .5rem 1rem;
+    transition: all .3s linear;
+
+        &:hover{
+            background:$brown;
+            color:white;
+            padding: .5rem 1.5rem;
+        }
+    }
+    .nav__single-logo{
+        margin-bottom:3rem;
+    }
+    .nav__single-logo:hover{
+        background: grey;
+    }
+      }
+      
+  }
+  .nav{
+    width:0 !important;
+    overflow: hidden;
+    transition: all .4s ease-in-out;
+}
+.show{
+    width:12rem !important;
+}
+  // Video Switch
+  .video__switch-container{
+      position: absolute;;
+      bottom:2rem;
+      right:3rem;
+      display: none;
+      transition: all .3s ease-in-out;
+    //   cursor: pointer;
+      z-index: 3;
+  }
+  .video__switch{
+      position: relative;
+      width: 5rem;
+      background:$bright-yellow;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+      padding:.25rem;
+      border-radius:.5rem;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+  }
+  .video__switch-btn{
+      position: absolute;
+      top:0;
+      left:0;
+      height:100%;
+      width:50%;
+      background:$brown;
+      border-radius: .5rem;
+     
+  }
+
+  .btnSlide{
+    left:50%;
+  }
+  
+  @media screen and (min-width:768px){
+    .video__switch-container{
+        display:block;
+    }
+  }
+}
+
+@media screen and (max-width:768px){
+    .header{
+        background:radial-gradient(rgba(159, 146, 3, 0.612),rgba(240, 146, 5, 0.536)),url(../img/headerBcg.jpeg);
+        background-position:center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        
+
+        .banner__social-icons{
+            width:50%;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-column-gap: 1rem;
+            margin: 0 auto;
+            text-align: center;
+        }
+    
+    }
+}
+// BANNER
+.banner{
+    z-index:3;
+    text-align: center;
+    &__title{
+        font-size:3.5rem;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: capitalize;
+        letter-spacing: .4rem;
+        color:white;
+        margin-bottom: 15px;
+    }
+    &__sub_title{
+        letter-spacing: .9rem;
+        color:white;
+        font-size:2rem;
+        text-transform: capitalize;
+        font-weight:300;
+    }
+    &__icons{
+        width:30%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: 1rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__social-icon{
+        display: block;
+        text-decoration: none;
+        color: white;
+        border:1px solid $bright-yellow;
+        border-radius:50%;
+        padding:1rem 0.25rem;
+        font-size:1.3rem;
+        transition:all .4s linear;
+        
+        &:hover{
+            background:goldenrod;
+        }
+    }
+}
+@media screen and (min-width:768px){
+    .banner__title{
+        font-size:6rem;
+        
+        
+    }
+    .banner__sub_title{
+        font-size:3rem;
+        letter-spacing:1rem;
+        color:white;
+        font-weight:300;
+    }
+
+}
+
+//VIDEO
+.video__container{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index: -1;
+
+   
+}
+.video__item{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
