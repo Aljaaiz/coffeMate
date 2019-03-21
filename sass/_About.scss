@@ -1,36 +1,65 @@
+#about{
+    background:rgb(37, 37, 37);
+}
 .about__img-item{
     width:100%;
     display: block;
-    border-radius: .25rem;
-    box-shadow:0px -1px  20px $dark-yellow;
-}
-.grid-container{
-    max-width: 90vw;
-    margin: 2rem auto;
-    display: grid;
-    grid-row-gap: 2rem;
+    height:100%;
+    // border-radius: .25rem;
+    // box-shadow:0px -1px  20px $dark-yellow;
+}  
+  .grid-container{
+    //    max-width: 90vw;
+    //    margin: 2rem auto;
+    //    display: grid;
+    //    grid-template-columns: 1fr;
+    //    grid-gap: 2rem;
     
  }
-.about-container{
+  .about-container{
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto 1fr;
-    grid-gap:2rem;
-}
- @media screen and(min-width:768px){
-     .grid-container-medium-2{
-         display: grid;
-         grid-template-columns:1fr 1fr;
-         grid-column-gap:4rem;
-     }
-     .grid-container{
-        max-width: 75vw;
-     } 
-     .order-top{
-         order:-1;
-     }
-     .about-container{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(auto ,1fr);
+    // grid-row-gap:1rem;
+    // padding:30px;
+  }
+  .details-container{
+      display:flex;
+      flex-direction: column;
+      align-self: center;
+      justify-self: center;
+    //   text-align: center;
+      padding:2rem 3rem;
+  }
+  @media screen and(max-width:768px){
+    .about-container{
         display: grid;
-        grid-template-columns: 100%;
- }
-}
+        grid-template-columns:100%;
+        grid-template-rows: minmax(auto ,1fr);
+        grid-row-gap:1rem;
+        // padding:30px;
+      }
+      .details-container{
+        padding:2rem;
+    }
+    .order-top{
+                 order:-1;
+    }
+  }
+//  @media screen and(min-width:768px){
+//      .grid-container-medium-2{
+//          display: grid;
+//          grid-template-columns:1fr 1fr;
+//          grid-column-gap:1rem;
+//      }
+//      .grid-container{
+//         max-width: 75vw;
+//      } 
+//      .order-top{
+//          order:-1;
+//      }
+//      .about-container{
+//         display: grid;
+//         grid-template-columns: 100%;
+//  }
+// }

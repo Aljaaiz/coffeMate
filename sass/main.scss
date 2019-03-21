@@ -26,6 +26,8 @@ body{
     font-size:3rem;
 
     &__name{
+        margin:1rem 0;
+        color:white;
         font-size:3rem;
         text-transform: capitalize;
     }
@@ -37,11 +39,16 @@ body{
     &__text{
         margin-top: 1rem;
         line-height:1.5rem;
-        color:$black;
+        font-weight:300;
+        color:#b5b5b5;
+        font-size:.9rem;
+        // color:$black;
     }
 }
 
-
+.span-gold{
+    color:#c29d66;
+}
 
 // PREALODER
 .preloader{
@@ -63,10 +70,9 @@ body{
 header{
     position: relative;
     min-height:100vh;
-    display: grid;
-    grid-template-columns: 80%;
+    display: flex;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
     
   .navBtn{
       position: fixed;
@@ -190,22 +196,44 @@ header{
 }
 // BANNER
 .banner{
+    margin-top: 7rem;
     z-index:3;
     text-align: center;
     &__title{
-        font-size:3.5rem;
+        font-weight:400;
+        font-size:3rem;
         font-family: 'Montserrat', sans-serif;
         text-transform: capitalize;
         letter-spacing: .4rem;
         color:white;
         margin-bottom: 15px;
     }
+    &__links{
+        
+        text-transform:uppercase;
+        font-size:.8rem;
+        margin-top: 2rem;
+        & a{
+            display:inline-block;
+            text-decoration: none;
+            color:white;
+            padding:1rem 1.5rem;
+            font-weight:300;
+            background: #000;
+            border-radius:2px;
+            margin:.3rem;
+            transition:all .3s ease-in;
+            &:hover{
+                background:$gold;
+            }
+        }
+    }
     &__sub_title{
         letter-spacing: .9rem;
         color:white;
         font-size:2rem;
         text-transform: capitalize;
-        font-weight:300;
+        font-weight:100;
     }
     &__icons{
         width:30%;
@@ -251,6 +279,7 @@ header{
     position: absolute;
     top:0;
     left:0;
+    bottom:10px;
     width:100%;
     z-index: -1;
 

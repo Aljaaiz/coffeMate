@@ -1,3 +1,71 @@
+.about__img-item {
+  width: 100%;
+  display: block;
+  border-radius: .25rem;
+  -webkit-box-shadow: 0px -1px 20px #C49C6A;
+          box-shadow: 0px -1px 20px #C49C6A;
+}
+
+.grid-container {
+  max-width: 90vw;
+  margin: 2rem auto;
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 2rem;
+}
+
+.about-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+  grid-gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .grid-container-medium-2 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-column-gap: 4rem;
+  }
+  .grid-container {
+    max-width: 75vw;
+  }
+  .order-top {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .about-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+}
+
+#drink {
+  background: #573b14;
+}
+
+.drink-card, .drink-form {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70%;
+      grid-template-columns: 70%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-row-gap: 1.5rem;
+  margin: 0 auto;
+  background: #000;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -7,12 +75,38 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: radial-gradient(rgba(0, 0, 0, 0.509), rgba(0, 0, 0, 0.612)), url(../img/bodyBcg.jpeg);
+  background: radial-gradient(rgba(114, 114, 114, 0.509), rgba(80, 80, 80, 0.612)), url(../img/bodyBcg.jpeg);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .great-font {
   font-family: 'Great Vibes', handwriting;
+}
+
+.section-padding {
+  padding: 3rem 0;
+}
+
+.section-title {
+  font-size: 3rem;
+}
+
+.section-title__name {
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+.section-title__underline {
+  background: #C49C6A;
+  height: 2px;
+  width: 160px;
+}
+
+.section-title__text {
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  color: #6e6e6d;
 }
 
 .preloader {
@@ -82,7 +176,7 @@ header .nav__links .nav__single-link {
 }
 
 header .nav__links .nav__single-link:hover {
-  background: #462a01;
+  background: #ad7c38;
   color: white;
   padding: .5rem 1.5rem;
 }
@@ -140,7 +234,7 @@ header .video__switch-btn {
   left: 0;
   height: 100%;
   width: 50%;
-  background: #462a01;
+  background: #ad7c38;
   border-radius: .5rem;
 }
 
