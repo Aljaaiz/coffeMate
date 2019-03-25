@@ -166,13 +166,6 @@
   opacity: 0.5;
   transform: scale(1.1); }
 
-@media screen and (max-width: 576px) {
-  .gallery-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4fr, 1fr);
-    grid-gap: 1rem; } }
-
 @media screen and (min-width: 992px) {
   .gallery-container {
     grid-gap: 1rem;
@@ -256,12 +249,13 @@
     background: #573b14; } }
 
 .contact {
-  background: #252525;
   color: #b5b5b5; }
 
 .contact-container {
+  max-width: 90vw;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 1rem; }
 
 .contact-item__icon {
@@ -269,14 +263,53 @@
   font-size: 3rem; }
 
 .contact-item {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  text-align: center; }
   .contact-item__title {
     font-weight: 300;
     margin-bottom: 1rem; }
   .contact-item__text {
     font-weight: 300; }
+
+.contact-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  order: -1; }
+
+@media screen and (min-width: 768px) {
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    order: -1; } }
+
+@media screen and (min-width: 992px) {
+  .contact-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    order: -1; }
+  .contact-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; }
+  .contact-map {
+    align-self: center; }
+  .order-1 {
+    order: 0; } }
+
+footer {
+  padding: 4rem 0;
+  text-align: center;
+  background: #252525; }
+  footer p {
+    font-weight: 300;
+    color: #CAA77A; }
+  footer a {
+    text-decoration: none;
+    color: #c29d66; }
+
+html {
+  scroll-behavior: smooth; }
 
 * {
   box-sizing: border-box;
@@ -285,7 +318,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: radial-gradient(rgba(114, 114, 114, 0.509), rgba(80, 80, 80, 0.612)), url(../img/bodyBcg.jpeg);
+  background: radial-gradient(rgba(41, 41, 41, 0.865), rgba(40, 39, 39, 0.756)), url(../img/bodyBcg.jpeg);
   background-repeat: no-repeat;
   background-size: cover; }
 
