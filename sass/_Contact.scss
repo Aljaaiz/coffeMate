@@ -1,0 +1,27 @@
+.contact {
+  background: #252525;
+  color: rgb(181, 181, 181);
+}
+.contact-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 1rem;
+}
+.contact-item__icon {
+  color: #c29d66;
+  font-size: 3rem;
+}
+.contact-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 1.5rem;
+  //   grid-gap: 1rem;
+
+  &__title {
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+  &__text {
+    font-weight: 300;
+  }
+}

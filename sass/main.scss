@@ -2,6 +2,7 @@
 @import "./About";
 @import "./Drink-sec";
 @import "./Gallery";
+@import "./Contact";
 
 * {
   box-sizing: border-box;
@@ -32,8 +33,16 @@ body {
   padding: 2rem;
 }
 //Section
+.section-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2rem auto;
+}
 .section-title {
-  font-size: 3rem;
+  margin: 2rem auto;
 
   &__name {
     margin: 1rem 0;
@@ -91,6 +100,7 @@ header {
     font-size: 3.5rem;
     color: $dark-yellow;
     cursor: pointer;
+    z-index: 999;
   }
 
   .nav {

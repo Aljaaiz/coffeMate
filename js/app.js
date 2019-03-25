@@ -24,14 +24,13 @@ document.querySelector(".video__switch").addEventListener("click", () => {
 
 // CREATING UI CONSTRUCTOR
 function UI() {}
-
+const ui = new UI();
 // FORM SUBMIT
 document.querySelector(".drink-form").addEventListener("submit", e => {
   const name = document.querySelector(".input-name").value;
   const last_name = document.querySelector(".last-name").value;
   const email = document.querySelector(".input-email").value;
 
-  const ui = new UI();
   const customer = new Customer(name, last_name, email);
 
   if (name === "" || last_name === "" || email === "") {
@@ -84,10 +83,47 @@ UI.prototype.clearFields = function() {
   document.querySelector(".input-email").value = "";
 };
 
-//CRRATE C+USTOMERS OBJECT CONTEUCTOR
+// SHOW MODAL
+UI.prototype.showModal = function(e) {
+  e.preventDefault();
+  if (e.target.parentElement.classList.contains("gallery-item__icon")) {
+    let id = e.target.parentElement.dataset.id;
+
+    const modal = document.querySelector(".gallery-modal");
+    const modalItem = document.querySelector(".gallery-modal__item");
+
+    modal.classList.add("gallery-modal--show");
+    modalItem.style.backgroundImage = `url(../img/work-${id}.jpeg)`;
+  }
+};
+
+UI.prototype.closeModal = function() {
+  const closeBtn = document.querySelector(".gallery-modal__close");
+  closeBtn.addEventListener("click", function() {
+    const modal = document.querySelector(".gallery-modal");
+    modal.classList.remove("gallery-modal--show");
+  });
+};
+
+//CRRATE CUSTOMERS OBJECT CONTEUCTOR
 
 function Customer(name, last_name, email) {
   this.name = name;
   this.last_name = last_name;
   this.email = email;
 }
+/*
+!  OPEN MODAL
+ */
+
+const links = document.querySelectorAll(".gallery-item__icon");
+links.forEach(link => {
+  link.addEventListener("click", function(e) {
+    ui.showModal(e);
+  });
+});
+
+/*
+!  CLOSE MODAL
+ */
+ui.closeModal();
