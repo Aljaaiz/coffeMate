@@ -203,15 +203,9 @@ header {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-
-    .banner__social-icons {
-      width: 50%;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-column-gap: 1rem;
-      margin: 0 auto;
-      text-align: center;
-    }
+  }
+  .banner {
+    margin-top: 9rem !important;
   }
 }
 // BANNER
