@@ -137,13 +137,22 @@
     height: 70vh;
     width: 60vw;
     border: 4px solid white;
-    // z-index: 1000;
+    z-index: 1200;
   }
+  // @media screen and (max-width: 768px) {
+  //   .gallery-modal__item {
+  //     position: relative;
+  //     background: url("../img/work-1.jpeg") center/cover;
+  //     height: 70vh;
+  //     width: 10vw;
+  //     border: 4px solid white;
+  //     // z-index: 1000;
+  //   }
 
   .gallery-modal__close {
     position: fixed;
-    top: 80px;
-    right: 190px;
+    top: 87px;
+    right: 210px;
     font-size: 2rem;
     color: white;
     cursor: pointer;
