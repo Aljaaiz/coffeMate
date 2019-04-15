@@ -162,17 +162,24 @@
   & p {
     margin-bottom: 0.5rem;
   }
-  & button a {
-    text-decoration: none;
+  & button {
     background: $gold;
     border: none;
     padding: 1rem 2rem;
     font-size: 1rem;
-    color: white;
     word-spacing: 0.2rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     cursor: pointer;
+
+    & a {
+      text-decoration: none;
+      color: white;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
   }
 }
 .section-header p {

@@ -1,8 +1,10 @@
 @import "./Variables";
+@import "./About-us";
 @import "./About";
 @import "./Drink-sec";
 @import "./Gallery";
 @import "./Contact";
+@import "./BookTable";
 @import "./Footer";
 
 html {
@@ -16,8 +18,8 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  background: radial-gradient(rgba(41, 41, 41, 0.865), rgba(40, 39, 39, 0.756)),
+  font-family: Montserrat, Helvetica, Arial, Lucida, sans-serif;
+  background: radial-gradient(rgba(41, 41, 41, 0.913), rgba(40, 39, 39, 0.756)),
     url(../img/bodyBcg.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,7 +30,7 @@ body {
   font-family: "Great Vibes", handwriting;
 }
 .section-padding {
-  padding: 3rem 0;
+  padding: 1rem 0;
 }
 .centered-header {
   margin: 0 auto;
@@ -138,7 +140,7 @@ header {
         margin-bottom: 3rem;
       }
       .nav__single-logo:hover {
-        background: grey;
+        background: $brown;
       }
     }
   }
@@ -231,7 +233,7 @@ header {
       display: inline-block;
       text-decoration: none;
       color: white;
-      padding: 1rem 1.5rem;
+      padding: 1rem 2rem;
       font-weight: 300;
       background: #000;
       border-radius: 2px;

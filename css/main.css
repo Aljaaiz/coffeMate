@@ -1,3 +1,22 @@
+#about-us {
+  padding: 2rem 0;
+  background: #242424; }
+
+.about-us-container {
+  width: 60%;
+  margin: 0 auto;
+  color: #b5b5b5; }
+  .about-us-container h1 {
+    text-align: center; }
+  .about-us-container p {
+    font-weight: 300;
+    font-size: 1rem; }
+
+@media screen and (max-width: 998px) {
+  .about-us-container {
+    width: 90%;
+    margin: 0 auto; } }
+
 #about {
   background: #252525; }
 
@@ -86,12 +105,14 @@
 
 .input-submit {
   width: 50%;
-  padding: 0.6rem 1rem;
+  padding: 0.9rem 1rem;
   font-size: 0.9rem;
   font-weight: 300;
   text-transform: uppercase;
   transition: all 0.3s ease-in;
-  border-radius: 2px; }
+  border-radius: 2px;
+  border: none;
+  background: #c29d66; }
 
 .input-submit:focus {
   outline: 0; }
@@ -375,17 +396,20 @@
     font-size: 1.5rem; }
   #opening-hour p {
     margin-bottom: 0.5rem; }
-  #opening-hour button a {
-    text-decoration: none;
+  #opening-hour button {
     background: #c29d66;
     border: none;
     padding: 1rem 2rem;
     font-size: 1rem;
-    color: white;
     word-spacing: 0.2rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     cursor: pointer; }
+    #opening-hour button a {
+      text-decoration: none;
+      color: white; }
+    #opening-hour button:hover {
+      opacity: 0.9; }
 
 .section-header p {
   font-size: 1.2rem;
@@ -397,6 +421,142 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-row-gap: 2rem; } }
+
+.book-table {
+  height: 100vh;
+  background: linear-gradient(to right, #1e1e1e9e, rgba(0, 0, 0, 0.516)), url(../img/coffee_header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+.book-table-container {
+  height: 80vh;
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+  text-align: center; }
+  .book-table-container h1 {
+    font-weight: 300;
+    margin-top: 200px;
+    font-size: 3rem;
+    letter-spacing: 0.7rem;
+    margin-bottom: 1rem; }
+  .book-table-container h3 {
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+    word-spacing: 0.1rem;
+    margin-bottom: 2rem; }
+  .book-table-container button {
+    display: inline-block;
+    background: #c29d66;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none; }
+    .book-table-container button a {
+      text-decoration: none;
+      color: white; }
+    .book-table-container button:hover {
+      opacity: 0.9; }
+
+.arrow-down img {
+  display: inline-block;
+  height: 70px;
+  margin-top: 100px; }
+
+@media screen and (max-width: 768px) {
+  .book-table-container h1 {
+    margin-top: 150px;
+    font-size: 2rem;
+    letter-spacing: 0.7rem;
+    margin-bottom: 1rem; }
+  .book-table-container h3 {
+    font-size: 1.7rem;
+    letter-spacing: 0.4rem;
+    word-spacing: 0.3rem;
+    margin-bottom: 2rem; }
+  .arrow-down {
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    margin-top: -20px; }
+  .book-a-table-regs-container {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center; }
+    .book-a-table-regs-container .book-a-table-form .form-group {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+      justify-content: space-between; }
+    .book-a-table-regs-container .book-a-table-form {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr; } }
+
+#book-a-table-regs {
+  background: #1d0101; }
+
+.book-a-table-regs-container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center; }
+  .book-a-table-regs-container .form-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    justify-content: space-between; }
+  .book-a-table-regs-container .book-a-table-form {
+    color: white;
+    padding: 2rem 0;
+    width: 60%;
+    margin: 0 auto; }
+  .book-a-table-regs-container input,
+  .book-a-table-regs-container select {
+    width: 100%;
+    background: #373737;
+    border: none;
+    font-size: 1rem;
+    padding: 1rem 0.5rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 1rem;
+    outline: none; }
+  .book-a-table-regs-container p {
+    text-align: left !important;
+    margin: 1rem 0; }
+  .book-a-table-regs-container input[type="checkbox"] {
+    width: 20px;
+    outline: none;
+    margin-right: 0.3rem;
+    padding: 0.9rem; }
+  .book-a-table-regs-container textarea {
+    width: 100%;
+    background: #373737;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    color: white; }
+  .book-a-table-regs-container .book-a-table__regButton {
+    display: inline-block;
+    background: #c29d66;
+    text-decoration: none;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: white;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none; }
+    .book-a-table-regs-container .book-a-table__regButton:hover {
+      opacity: 0.9; }
 
 footer {
   padding: 4rem 0;
@@ -418,8 +578,8 @@ html {
   padding: 0; }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  background: radial-gradient(rgba(41, 41, 41, 0.865), rgba(40, 39, 39, 0.756)), url(../img/bodyBcg.jpeg);
+  font-family: Montserrat, Helvetica, Arial, Lucida, sans-serif;
+  background: radial-gradient(rgba(41, 41, 41, 0.913), rgba(40, 39, 39, 0.756)), url(../img/bodyBcg.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden; }
@@ -428,7 +588,7 @@ body {
   font-family: "Great Vibes", handwriting; }
 
 .section-padding {
-  padding: 3rem 0; }
+  padding: 1rem 0; }
 
 .centered-header {
   margin: 0 auto; }
@@ -514,7 +674,7 @@ header {
       header .nav__links .nav__single-logo {
         margin-bottom: 3rem; }
       header .nav__links .nav__single-logo:hover {
-        background: grey; }
+        background: #ad7c38; }
   header .nav {
     width: 0 !important;
     overflow: hidden;
@@ -583,7 +743,7 @@ header {
       display: inline-block;
       text-decoration: none;
       color: white;
-      padding: 1rem 1.5rem;
+      padding: 1rem 2rem;
       font-weight: 300;
       background: #000;
       border-radius: 2px;

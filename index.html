@@ -11,7 +11,7 @@
   <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
   <link rel="stylesheet" href="css/main.css">
   <!-- font awesome -->
-  <script src="js/all.js"></script>
+  <!-- <script src="js/all.js"></script> -->
 </head>
 
 <body>
@@ -29,20 +29,12 @@
       <h5 class="banner__sub_title great-font">Restaurant</h5>
       <div class="banner__links">
         <a href="#contact">contact</a>
-        <a href="#drink">BOOK A TABLE</a>
-        <!-- <a href="#" class="banner__social-icon">
-          <i class="fab fa-facebook fa-fw"></i>
-      </a>
-      <a href="#" class="banner__social-icon">
-         <i class="fab fa-twitter fa-fw"></i>
-      </a>
-      <a href="#" class="banner__social-icon">
-          <i class="fab fa-google-plus fa-fw"></i>
-      </a>
-      <a href="#" class="banner__social-icon">
-          <i class="fab fa-instagram fa-fw"></i>
-      </a> -->
+        <a href="booktable.html">BOOK A TABLE</a>
+       
       </div>
+      <div class="arrow-down">
+        <a href="#about-us"><img src="img/arrowdown.svg" alt="" style="width:100%"></a>
+     </div>
     </div>
     <!--END OF BANNER-->
     <!--VIDEO SWITCH-->
@@ -68,7 +60,6 @@
     <!--NAVBTN-->
     <div class="navBtn">
       <ion-icon name="menu"></ion-icon>
-      <!-- <i class="fas fa-bars"></i> -->
     </div>
     <!--END OF NAVBTN-->
 
@@ -92,8 +83,18 @@
   </header>
   <!--END HEADER-->
 
+  <section id="about-us" class="section-padding">
+    <div class="section-container">
+      <div class="about-us-container">
+        <h1 class="section-title__name great-font"><span class="span-gold">The</span>Restaurant</h1>
+       <p>
+          The coffeMate restuarant is a modern, exquisite and comfortable spot, where you will feel comfortable and obviously you can taste our coffee, where you will discover tempting manifestations to attempt and share with your love ones.
+       </p>
+      </div>
+    </div>
+  </section>
   <!--ABOUT -->
-  <section class="about section-padding" id="about">
+  <section class="about" id="about">
     <div class="grid-container grid-container-medium-2">
       <div class="div1">
         <article class="about-container">
@@ -170,8 +171,7 @@
   <!-- OUR COFFE GALLERY-->
   <section class="gallery section-padding" id="gallery">
       <div class="section-container">
-        
-            <h1 class="section-title__name great-font       centered-header"><span class="span-gold">Our</span>           <span>Gallery</span></h1>
+            <h1 class="section-title__name great-font       centered-header"><span class="span-gold">Our</span><span>Gallery</span></h1>
       <div class="gallery-container ">
                   <!-- Start of Single-Gallery Item-->
                   <div class="gallery-item item-1">
@@ -274,7 +274,7 @@
         <p class="contact-item__text">Mon - Fri 8:00am - 8:00pm</p>
         <p class="contact-item__text">Sat - Sun 9:00am - 10:00pm</p>
       </div>
-    <button class="book-table-btn"><a href="#">Book a table</a></button>
+    <button class="book-table-btn"><a href="booktable.html">Book a table</a></button>
   </div>
 
   <div class="contact-form">
@@ -285,12 +285,12 @@
         </div>
         <div class="form">
           <div class="input-group name_email">
-          <input type="text" placeholder="name">
-          <input type="email" placeholder="Email">
+          <input type="text" placeholder="name" id="contact-us-name">
+          <input type="email" placeholder="Email" id="contact-us-email">
           </div>
-          <textarea type="text" placeholder="message" id="msg"></textarea>
-          <p><input type="checkbox">I have read and understand the privacy policy</p>
-          <button id="send">Send</button>
+          <textarea type="text" placeholder="message" id="msg" id="contact-us-msg"></textarea>
+          <p><input type="checkbox" id="contact-us-check-box">I have read and understand the privacy policy</p>
+          <button id="send" id="contact-us-btn">Send</button>
         </div>
     <!--Single Conatct Item -->
     <div class="contact-item">
@@ -315,7 +315,8 @@
 <footer>
  <p>&copy; 2019 cofeemate designed by <a href="http://www.jamiuademola.com" target="_blank">Jamiu Ademola</a></p>
 </footer>
-  <script src="js/app.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/app.js"></script>2
 </body>
 
 </html>

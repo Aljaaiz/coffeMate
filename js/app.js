@@ -9,9 +9,12 @@ const navBtn = document.querySelector(".navBtn");
 navBtn.addEventListener("click", () => {
   nav.classList.toggle("show");
 });
+
 /*
-  VIDEO SWICTH */
-document.querySelector(".video__switch").addEventListener("click", () => {
+  VIDEO SWICTH
+*/
+
+document.querySelector(".video__switch").addEventListener("click", e => {
   let btn = document.querySelector(".video__switch-btn");
   if (!btn.classList.contains("btnSlide")) {
     btn.classList.add("btnSlide");
@@ -23,6 +26,7 @@ document.querySelector(".video__switch").addEventListener("click", () => {
 });
 
 // CREATING UI CONSTRUCTOR
+
 function UI() {}
 const ui = new UI();
 // FORM SUBMIT
@@ -127,3 +131,31 @@ links.forEach(link => {
 !  CLOSE MODAL
  */
 ui.closeModal();
+
+//
+// CONTACT US
+//
+
+// SMOOTH SCROOL
+$(function() {
+  // Smooth Scrolling
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (
+      location.pathname.replace(/^\//, "") ==
+        this.pathname.replace(/^\//, "") &&
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+      if (target.length) {
+        $("html, body").animate(
+          {
+            scrollTop: target.offset().top
+          },
+          1000
+        );
+        return false;
+      }
+    }
+  });
+});

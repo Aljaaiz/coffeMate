@@ -1,0 +1,174 @@
+.book-table {
+  height: 100vh;
+  background: linear-gradient(to right, #1e1e1e9e, rgba(0, 0, 0, 0.516)),
+    url(../img/coffee_header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.book-table-container {
+  height: 80vh;
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
+  text-align: center;
+
+  & h1 {
+    font-weight: 300;
+    margin-top: 200px;
+    font-size: 3rem;
+    letter-spacing: 0.7rem;
+    margin-bottom: 1rem;
+  }
+  & h3 {
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+    word-spacing: 0.1rem;
+    margin-bottom: 2rem;
+  }
+  & button {
+    display: inline-block;
+    background: $gold;
+
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+
+    & a {
+      text-decoration: none;
+      color: white;
+    }
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+.arrow-down {
+  & img {
+    display: inline-block;
+    height: 70px;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .book-table-container h1 {
+    margin-top: 150px;
+    font-size: 2rem;
+    letter-spacing: 0.7rem;
+    margin-bottom: 1rem;
+  }
+  .book-table-container h3 {
+    font-size: 1.7rem;
+    letter-spacing: 0.4rem;
+    word-spacing: 0.3rem;
+    margin-bottom: 2rem;
+  }
+  .arrow-down {
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    margin-top: -20px;
+  }
+
+  .book-a-table-regs-container {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+
+    & .book-a-table-form .form-group {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+      justify-content: space-between;
+    }
+
+    & .book-a-table-form {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+#book-a-table-regs {
+  background: rgb(29, 1, 1);
+}
+.book-a-table-regs-container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  & .form-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    justify-content: space-between;
+  }
+
+  & .book-a-table-form {
+    color: white;
+    padding: 2rem 0;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  & input,
+  select {
+    width: 100%;
+    background: #373737;
+    border: none;
+    font-size: 1rem;
+    padding: 1rem 0.5rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 1rem;
+    outline: none;
+  }
+  & p {
+    text-align: left !important;
+    margin: 1rem 0;
+  }
+  & input[type="checkbox"] {
+    width: 20px;
+    outline: none;
+    margin-right: 0.3rem;
+    padding: 0.9rem;
+  }
+  & textarea {
+    width: 100%;
+    background: #373737;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    color: white;
+  }
+
+  & .book-a-table__regButton {
+    display: inline-block;
+    background: $gold;
+    text-decoration: none;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: white;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
